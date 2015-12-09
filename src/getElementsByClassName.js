@@ -10,7 +10,7 @@ var getElementsByClassName = function(className){
 	  if(currentNode.classList.contains(classNeeded)){
 		accumulator.push(currentNode);
 	  }
-	  for(child in currentNode.childNodes){
+	  for(var child in currentNode.childNodes){
 		drillDown(classNeeded,currentNode.childNodes[child],accumulator);
 	  }
 	}
